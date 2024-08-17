@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deadline</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: aqua;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        table {
+          border-collapse: collapse; 
+          width: 100%;   ;
+        }
+        
+        td, th {
+          border: 1px solid #000000;  
+          text-align: lef
+          padding: 10px; 
+        }
+        h1 {
+            background-color: black;
+            color: aliceblue;
+        }
+        pre{
+            background-color: rgb(0, 0, 0);
+            color: rgb(22, 230, 11);
+        }
+      </style>   
+    <ol>
+        <li><h1>HTML Basic Examples</h1>
+            <p >In this chapter we will show some basic HTML examples.
+        
+                Don't worry if we use tags you have not learned about yet</p>
+                <h2>HTML Documents</h2>
+                    <p >All HTML documents must start with a document type declaration: <! DOCTYPE html >.
+            
+                        The HTML document itself begins with < html> and ends with < /html>.
+                        
+                        The visible part of the HTML document is between < body > and < /body >.</p>
+                        <h2>The < !DOCTYPE> Declaration</h2>
+                            <p>The <!DOCTYPE> declaration represents the document type, and helps browsers to display web pages correctly.</p>
+                            <p>It must only appear once, at the top of the page (before any HTML tags).</p>
+                            <p>The <!DOCTYPE> declaration is not case sensitive.</p>
+                            ><h2>HTML Headings</h2></li></li></li></li>
+                            <p>HTML headings are defined with the < h1> to < h6> tags.</p>
+                            <p>< h1> defines the most important heading. < h6> defines the least important heading: </p>
+                        <h2> HTML Paragraphs</h2></li>
+                        <p>HTML paragraphs are defined with the < p> tag:</p>
+                        <h2> HTML Links</h2></li>
+                        <p>HTML links are defined with the <a > tag:</p>
+                            <p>The link's destination is specified in the href attribute. </p>
+                            <p>Attributes are used to provide additional information about HTML elements.</p>
+                            <p>You will learn more about attributes in a later chapter.</p>
+                        <h2> HHTML Images</h2></li>
+                        <p>HTML images are defined with the < img> tag.</p>
+                        <p>he source file (src), alternative text (alt), width, and height are provided as attributes:</p>
+                        <li><h1>HTML element</h1></li>
+                        <p>The HTML element is everything from the start tag to the end tag:
+
+                            < t agname>Content goes here...< /tagname ></p>
+                            <p>Examples of some HTML elements:</p>
+                            <p>< h1>My First Heading</ h1></p>
+<table> 
+    <tr>
+        <th>Start tag</th>
+        <th>Element content</th>
+        <th>End tag</th>
+    </tr>
+    <tr>
+        <td>< h1>		</td>
+        <td>	My First Heading	</td>
+        <td>< /h1></td>
+    </tr>
+    <tr>
+        <td>< p>		</td>
+        <td>	My First paragraph.	</td>
+        <td>< /p></td>
+    </tr>
+    <tr>
+        <td>< br	>	</td>
+        <td>	none	</td>
+        <td>none</td>
+    </tr>
+</table>
+<h2>Nested HTML Elements</h2>
+<p>HTML elements can be nested (this means that elements can contain other elements).</p>
+<p>All HTML documents consist of nested HTML elements.</p>
+<p>The following example contains four HTML elements (< html>, < body>, < h1> and < p>)</p>
+<h2>Example Explained</h2>
+<p>The < html> element is the root element and it defines the whole HTML document.</p>
+<p>It has a start tag < html> and an end tag </ html>.</p>
+<p>Then, inside the < h tml> element there is a < bo dy> element:</p>
+<p>The <body> element defines the document's body.</p>
+<p>  It has a start tag < body> and an end tag </ body>.</p>
+<p>  Then, inside the < body> element there are two other elements: < h1> and < p>:</p>
+<p>The < h 1> element defines a heading.</p>
+<p>It has a start tag < h1 > and an end tag < /h1 >:</p>
+<p> the <p > element defines a paragraph.</p>
+<p> It has a start tag < p> and an end tag < /p>:</p>
+<h2>Never Skip the End Tag</h2>
+<p>Some HTML elements will display correctly, even if you forget the end tag:</p>
+<h2>Empty HTML Elements</h2>
+<p>HTML elements with no content are called empty elements.</p>
+<p>The < br> tag defines a line break, and is an empty element without a closing tag:</p>
+
+<li><h1>HTML Attributes</h1></li>
+<h2>HTML Attributes</h2>
+<p>All HTML elements can have attributes</p>
+<p>Attributes provide additional information about elements</p>
+    <p>Attributes are always specified in the start tag</p>
+        <p>Attributes usually come in name/value pairs like: name="value"</p>
+<h2>The src Attribute</h2>
+<p>TThe < img> tag is used to embed an image in an HTML page. The src attribute specifies the path to the image to be displayed:</p>
+<p>There are two ways to specify the URL in the src attribute:</p>
+
+    <p>1. Absolute URL - Links to an external image that is hosted on another website. Example: src="https://www.w3schools.com/images/img_girl.jpg".</p>
+    
+        <p>Notes: External images might be under copyright. If you do not get permission to use it, you may be in violation of copyright laws. In addition, you cannot control external images; it can suddenly be removed or changed.</p>
+    
+            <p>2. Relative URL - Links to an image that is hosted within the website. Here, the URL does not include the domain name. If the URL begins without a slash, it will be relative to the current page. Example: src="img_girl.jpg". If the URL begins with a slash, it will be relative to the domain. Example: src="/images/img_girl.jpg".</p>
+    
+                <p>Tip: It is almost always best to use relative URLs. They will not break if you change domain.</p>
+<h2>The width and height Attributes</h2>
+<p>The < img> tag should also contain the width and height attributes, which specify the width and height of the image (in pixels):</p>
+<h2>The alt Attribute</h2>
+<p>The required alt attribute for the < img> tag specifies an alternate text for an image, if the image for some reason cannot be displayed. This can be due to a slow connection, or an error in the src attribute, or if the user uses a screen reader.</p>
+<h2>The style Attribute</h2>
+<p>The style attribute is used to add styles to an element, such as color, font, size, and more.</p>
+<h2>The lang Attribute</h2>
+<p>You should always include the lang attribute inside the <html> tag, to declare the language of the Web page. This is meant to assist search engines and browsers.</p>
+
+<p>The following example specifies English as the language:</p>
+<p>Country codes can also be added to the language code in the lang attribute. So, the first two characters define the language of the HTML page, and the last two characters define the country.</p>
+
+    <p>The following example specifies English as the language and United States as the country:</p>
+    <h2>The title Attribute</h2>
+    <p>The title attribute defines some extra information about an element.</p>
+
+        <p> The value of the title attribute will be displayed as a tooltip when you mouse over the element:</p>
+        
+
+        <li><h1>HTML Headings</h1></li>
+        <p>HTML headings are titles or subtitles that you want to display on a webpage.</p>
+<h2>HTML Headings</h2>
+<p>All HTML elements can have attributes</p>
+<p>HTML headings are defined with the < h1> to < h6> tags.</p>
+
+    <p> < h1> defines the most important heading. < h6> defines the least important heading.</p>
+    
+<h2>Headings Are Important</h2>
+<p>Search engines use the headings to index the structure and content of your web pages.</p>
+
+<p> Users often skim a page by its headings. It is important to use headings to show the document structure.</p>
+    
+<p> < h1> headings should be used for main headings, followed by < h2> headings, then the less important < h3>, and so on.</p>
+
+<h2>Bigger Headings</h2>
+<p>Each HTML heading has a default size. However, you can specify the size for any heading with the style attribute, using the CSS font-size property:</p>
+<h2>HTML Tag Reference</h2>
+<p>W3Schools' tag reference contains additional information about these tags and their attributes.</p>
+<table>
+    <tr>
+        <th>tag</th>
+        <th> Description</th>
+    </tr>
+    <tr>
+        <td>< html>	</td>
+        <td> Defines the root of an HTML document</td>
+    </tr>
+    <tr>
+        <td>< body>	</td>
+        <td> Defines the document's body</td>
+    </tr>
+    <tr>
+        <td>> < h1> to < h6>	</td>
+        <td> Defines HTML headings</td>
+    </tr>
+</table>
+
+<li><h1>HTML Paragraphs</h1></li>
+<p>A paragraph always starts on a new line, and is usually a block of text.</p>
+<p>The HTML < p> element defines a paragraph.</p>
+
+    <p>A paragraph always starts on a new line, and browsers automatically add some white space (a margin) before and after a paragraph.</p>
+<h2>HTML Display</h2>
+<p>You cannot be sure how HTML will be displayed.</p>
+
+    <p>   Large or small screens, and resized windows will create different results.</p>
+    
+        <p> With HTML, you cannot change the display by adding extra spaces or extra lines in your HTML code.</p>
+    
+            <p> The browser will automatically remove any extra spaces and lines when the page is displayed:</p>
+<hr>
+<h2>HTML Horizontal Rules</h2>
+<p>The < hr> tag defines a thematic break in an HTML page, and is most often displayed as a horizontal rule.</p>
+
+    <p>The < hr> element is used to separate content (or define a change) in an HTML page:</p>
+    <p>The < hr> tag is an empty tag, which means that it has no end tag.</p>
+ <pre> Example
+    < h1>This is heading 1< /h1>
+    < p>This is some text.< /p>
+    < hr>
+    < h2>This is heading 2< /h2>
+    < p>This is some other text.< /p>
+    < hr> </pre>
+    <p>The < hr> tag is an empty tag, which means that it has no end tag.</p>
+    <h2>HTML Line Breaks</h2>
+        <p>The HTML < br> element defines a line break.</p>
+        
+        <p>Use < br> if you want a line break (a new line) without starting a new paragraph:</p>
+        <pre> Example
+            < p>This is< br>a paragraph< br>with line breaks. </pre>
+            <p>The < br> tag is an empty tag, which means that it has no end tag.</p>
+<h2>The Poem Problem</h2>
+    This poem will display on a single line:
+    <pre> Example
+        < p>
+            My Bonnie lies over the ocean.
+          
+            My Bonnie lies over the sea.
+          
+            My Bonnie lies over the ocean.
+          
+            Oh, bring back my Bonnie to me.
+          < /p></pre>
+          <h2>Solution - The HTML < pre> Element </h2>
+            <p>The HTML < pre> element defines preformatted text.</p>
+            
+            <p> The text inside a < pre> element is displayed in a fixed-width font (usually Courier), and it preserves both spaces and line breaks:</p>
+            <pre> Example
+                < pre>
+                    My Bonnie lies over the ocean.
+                  
+                    My Bonnie lies over the sea.
+                  
+                    My Bonnie lies over the ocean.
+                  
+                    Oh, bring back my Bonnie to me.
+                  < /pre>
+                  < /p></pre>
+<li><h1>HTML Styles</h1></li>
+<p>The HTML style attribute is used to add styles to an element, such as color, font, size, and more.</p>   
+<pre>Example
+    I am Red
+    
+    I am Blue
+    
+    I am Big</pre>
+    <h2>The HTML Style Attribute</h2>
+       <p> Setting the style of an HTML element, can be done with the style attribute.</p>
+        
+       <p>The HTML style attribute has the following syntax:</p>
+       <pre>< tagname style="property:value;">< /tagname></pre>
+       <p>The property is a CSS property. The value is a CSS value.</p>
+       <h2>Background Color</h2>
+       <p>The CSS background-color property defines the background color for an HTML element.</p>
+       <pre>Example
+        Set the background color for a page to powderblue:
+
+< body style="background-color:powderblue;">
+
+< h1>This is a heading < /h1>
+< p>This is a paragraph.< /p>
+
+</ body></pre>
+<pre>Set background color for two different elements:
+
+    < body>
+    
+    < h1 style="background-color:powderblue;">This is a heading< /h1>
+    < p style="background-color:tomato;">This is a paragraph.< /p>
+    
+    < /body></pre>
+    <h2>Text Color</h2>
+        <p>The CSS color property defines the text color for an HTML element:</p>
+        <pre>Example
+            < h1 style="color:blue;">This is a heading< /h1>
+            < p style="color:red;">This is a paragraph.< /p></pre>
+            <h2>Fonts</h2>
+                <p>The CSS font-family property defines the font to be used for an HTML element:</p>
+                <pre>Example
+                    < h1 style="font-family:verdana;">This is a heading< /h1>
+                    < p style="font-family:courier;">This is a paragraph.< /p></pre>
+    <h2>Text Size</h2>
+        <p>The CSS font-size property defines the text size for an HTML element:</p>
+        <pre>Example
+            < h1 style="font-size:300%;">This is a heading< /h1>
+            < p style="font-size:160%;">This is a paragraph.< /p></pre>
+    <h2>Text Alignment</h2>
+        <p>The CSS text-align property defines the horizontal text alignment for an HTML element:</p>
+        
+        <pre>Example
+        < h1 style="text-align:center;">Centered Heading< /h1>
+        < p style="text-align:center;">Centered paragraph.< /p></pre>
+        <li></li><h1>HTML Text Formatting</h1></li>
+        <p>HTML contains several elements for defining text with a special meaning.</p><
+
+            <pre>>Example
+            This text is bold
+            
+            This text is italic
+            
+            This is subscript and superscript</pre>
+           <h2> HTML Formatting Elements</h2>
+<div>Formatting elements were designed to display special types of text:</div>
+<p>
+< b> - Bold text</p>
+<p>< strong> - Important text</p>
+<p>< i> - Italic text</p>
+<p>< em> - Emphasized text</p>
+<p>< mark> - Marked text</p>
+<p>< small> - Smaller text</p>
+<p>< del> - Deleted text</p>
+<p>< ins> - Inserted text</p>
+<p>< sub> - Subscript text</p>
+<p>< sup> - Superscript text</p>
+<h2>HTML < b> and < strong> Elements</h2>
+    <p>The HTML < b> element defines bold text, without any extra importance.</p>
+    
+    <pre>Example
+    < b>This text is bold< /b></pre>
+    <p>The HTML < strong> element defines text with strong importance. The content inside is typically displayed in bold.</p>
+<pre>
+        Example
+        < strong>This text is important!< /strong></pre>
+        <h2>HTML < i> and < em> Elements</h2>
+           <p> The HTML < i> element defines a part of text in an alternate voice or mood. The content inside is typically displayed in italic.</p>
+            
+           <p>  Tip: The < i> tag is often used to indicate a technical term, a phrase from another language, a thought, a ship name, etc.<p> 
+            
+           <pre> Example
+            < i>This text is italic</ i></pre>
+    <p>The HTML < em> element defines emphasized text. The content inside is typically displayed in italic.</p>
+
+    <p>  Tip: A screen reader will pronounce the words in < em> with an emphasis, using verbal stress.</p>
+      <pre>  
+        Example
+        < em>This text is emphasized< /em></pre>
+        <h2>HTML < small> Element</h2>
+            <p>The HTML < small> element defines smaller text:</p>
+           <pre>
+            Example
+            < small>This is some smaller text.< /small></pre> 
+                <h2>HTML < mark> Element</h2>
+                <p>The HTML < mark> element defines text that should be marked or highlighted:</p>
+               <pre>
+                Example
+                < p>Do not forget to buy < mark>milk< /mark> today.< /p></pre> 
+    <h2 >HTML < del> Element/h2>
+       <p> The HTML < del> element defines text that has been deleted from a document. Browsers will usually strike a line through deleted text:</p>
+        <pre>
+        Example
+        < p>My favorite color is < del>blue< /del> red.< /p></pre>
+    <h2>HTML < ins> Element</h2>
+       <p> The HTML < ins> element defines a text that has been inserted into a document. Browsers will usually underline inserted text:</p>
+        <pre>
+        Example
+        < p>My favorite color is < del>blue< /del> < ins>red< /ins>.< /p></pre>
+        <h2>HTML < sub> Element</h2>
+           <p> The HTML < sub> element defines subscript text. Subscript text appears half a character below the normal line, and is sometimes rendered in a smaller font. Subscript text can be used for chemical formulas, like H2O:</p>
+            <pre>
+            Example
+            < p>This is < sub>subscripted< /sub> text.< /p></pre>
+    <h2>HTML < sup> Element</h2>
+        <p>The HTML < sup> element defines superscript text. Superscript text appears half a character above the normal line, and is sometimes rendered in a smaller font. Superscript text can be used for footnotes, like WWW[1]:</p>
+        <pre>
+        Example
+        < p>This is < sup>superscripted< /sup> text.< /p></pre>
+        <li><h1>HTML Quotation and Citation Elements</h1></li>
+            <p>In this chapter we will go through the < blockquote>,< q>, < abbr>, < address>, < cite>, and < bdo> HTML elements.</p>
+            <pre>
+            Example
+            Here is a quote from WWF's website:
+            
+            For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, <br>WWF works in nearly 100 countries. At every level, we collaborate with people around the world to develop and <br> deliver innovative solutions that protect communities, wildlife, and the places in which they live.</pre>
+            <h2>HTML < sblockquote> for Quotations</h2>
+            <p>he HTML < blockquote> element defines a section that is quoted from another source.</p>
+            
+            <p>Browsers usually indent < blockquote> elements.</p>
+            <pre>
+            Example
+            < p>Here is a quote from WWF's website:</p>
+            < blockquote cite="http://www.worldwildlife.org/who/index.html">
+            For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, WWF works in nearly 100 countries. At every level, we collaborate with people around the world to develop and deliver innovative solutions that protect communities, wildlife, and the places in which they live.
+            < /blockquote></pre>
+           <h2> HTML < q> for Short Quotations</h2>
+           <p> The HTML < q> tag defines a short quotation.</p>
+            
+            <p>Browsers normally insert quotation marks around the quotation.</p>
+            <pre>
+            Example
+            < p>WWF's goal is to: < q>Build a future where people live in harmony with nature.< /q>< /p></pre>
+
+           <h2> HTML < abbr> for Abbreviations</h2>
+                <p>The HTML < abbr> tag defines an abbreviation or an acronym, like "HTML", "CSS", "Mr.", "Dr.", "ASAP", "ATM".</p>
+                
+                <p>Marking abbreviations can give useful information to browsers, translation systems and search-engines.</p>
+                
+                <p style="background-color: yellow;">>Tip: Use the global title attribute to show the description for the abbreviation/acronym when you mouse over the element. </p>
+                <pre>
+                Example
+                < p>The < abbr title="World Health Organization">WHO< /abbr> was founded in 1948.< /p></pre>
+                <h2>HTML  < address> for Contact Information</h2>
+                <P>The HTML < address> tag defines the contact information for the author/owner of a document or an article.</P>
+                
+                <P> The contact information can be an email address, URL, physical address, phone number, social media handle, etc.</P>
+                
+                <P>The text in the < address> element usually renders in italic, and browsers will always add a line break before and after the < address> element.</P>
+               <pre>
+                Example
+                <address>
+                Written by John Doe.< br>
+                Visit us at:< br>
+                Example.com< br>
+                Box 564, Disneyland< br>
+                USA
+                < /address></pre>
+                <h2>HTML < cite> for Work Title</h2>
+                <p>The HTML < cite> tag defines the title of a creative work (e.g. a book, a poem, a song, a movie, a painting, a sculpture, etc.).</p>
+                <p style="background-color: yellow;">Note: A person's name is not the title of a work.</p>
+                
+                <p>The text in the < cite> element usually renders in italic.</p>
+                <pre>
+                Example
+                < p>< cite>The Scream< /cite> by Edvard Munch. Painted in 1893.< /p></pre>
+               <h2> HTML < bdo> for Bi-Directional Override</h2>
+               <p> BDO stands for Bi-Directional Override.</p>
+                <p>The HTML < bdo> tag is used to override the current text direction:</p>
+                <pre>
+                Example
+                < bdo dir="rtl">This text will be written from right to left< /bdo></pre>
+
+                <li><h1>HTML Comments</h1></li>
+                    <p>HTML comments are not displayed in the browser, but they can help document your HTML source code.</p>
+                    
+                    <h2>HTML Comment Tag</h2>
+                    <p> You can add comments to your HTML source by using the following syntax:</p>
+                    
+                    < !-- Write your comments here -->
+                    <p> Notice that there is an exclamation point (!) in the start tag, but not in the end tag.</p>
+                    
+                    <p style="background-color: yellow;"> Note: Comments are not displayed by the browser, but they can help document your HTML source code.</p>
+                    
+                    <h2>Add Comments</h2>
+                    <p> With comments you can place notifications and reminders in your HTML code:</p>
+                    <pre>
+                    Example
+                    < !-- This is a comment -->
+                    
+                    < p>This is a paragraph.< /p>
+                    
+                    < !-- Remember to add more information here --></pre>
+                    <h2>Hide Content</h2>
+                  <p>Comments can be used to hide content.</p> 
+                    
+                  <p>This can be helpful if you hide content temporarily:</p> 
+                    <pre>
+                    Example
+                    < p>This is a paragraph.< /p>
+                    
+                    < !-- <p>This is another paragraph </p> -->
+                    
+                    < p>This is a paragraph too.< /p></pre>
+                    <p>You can also hide more than one line. Everything between the  < !-- and the --> will be hidden from the display.</p>
+                    <pre>
+                    Example
+                    Hide a section of HTML code:
+                    
+                    < p>This is a paragraph.< /p>
+                    < !--
+                    < p>Look at this cool image:< /p>
+                    < img border="0" src="pic_trulli.jpg" alt="Trulli">
+                    -->
+                    < p>This is a paragraph too.< /p></pre>
+                    Comments are also great for debugging HTML, because you can comment out HTML lines of code, one at a time, to search for errors.
+                    <h2>Hide Inline Content</h2>
+                       <p> Comments can be used to hide parts in the middle of the HTML code.</p>
+                       <pre>
+ Example
+ Hide a part of a paragraph:
+                        
+< p>This < !-- great text --> is a paragraph.< /p></pre>
+<li><h1>HTML Colors</h1></li>
+    <p>HTML colors are specified with predefined color names, or with RGB, HEX, HSL, RGBA, or HSLA values.</p>
+    
+    <p>Color Names</p>
+    <p>In HTML, a color can be specified by using a color name:</p>
+    <pre style="background-color: black;">
+    <p style="background-color:Tomato;">Tomato</p>
+<p style="background-color:Orange;">Orange</p>
+<p style="background-color:DodgerBlue;">DodgerBlue</p>
+<p style="background-color:MediumSeaGreen;">MediumSeaGreen</p>
+<p style="background-color:Gray;">Gray</p>
+    <p style="background-color:SlateBlue;">SlateBlue</p>
+        <p style="background-color:SlateBlue;">SlateBlue</p>
+           <p style="background-color:Violet;">Violet</p>
+            <p style="background-color:SlateBlue;">SlateBlue</p>
+              <p  style="background-color:LightGray;">LightGray</p></pre>
+             <p> HTML supports 140 standard color names.</p>
+
+               <h2> Background Color</h2>
+                <p>You can set the background color for HTML elements:</p>
+                <pre>Example
+                    < h1 style="background-color:DodgerBlue;">Hello World< /h1>
+                    < p style="background-color:Tomato;">Lorem ipsum...< /p></pre>
+        <h2>Text Color</h2>
+           <p> You can set the color of text:</p>
+            
+           <p style="color: red;">Hello World</p>
+          <p style="color: blue;"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p> 
+            
+          <p style="color: blue;">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+            </p> 
+            <pre>
+            Example
+            < h1 style="color:Tomato;">Hello World< /h1>
+            < p style="color:DodgerBlue;">Lorem ipsum...< /p>
+            < p style="color:MediumSeaGreen;">Ut wisi enim...< /p></pre>
+            <h2>Border Color</h2>
+                <p>ou can set the color of borders:</p>
+                
+                <p style="border: 1px solid blue;"> Hello World</p>
+                    <p style="border:1px solid red;"> Hello World</p>
+                        <p style="border:1px solid yellow;">Hello World</p>
+                        <pre>
+                Example
+                < h1 style="border:2px solid Tomato;">Hello World< /h1>
+                < h1 style="border:2px solid DodgerBlue;">Hello World< /h1>
+                < h1 style="border:2px solid Violet;">Hello World< /h1></pre>
+                <h2>Color Values</h2>
+
+                    In HTML, colors can also be specified using RGB values, HEX values, HSL values, RGBA values, and HSLA values.
+                    
+                    The following three < div> elements have their background color set with RGB, HEX, and HSL values:
+                    
+<p style="background-color:rgb(255, 99, 71);">rgb(255, 99, 71)</p>
+<p style="background-color:#ff6347;">#ff6347</p>
+<p style="background-color:hsl(9, 100%, 64%);">hsl(9, 100%, 64%)</p>
+
+<p>Same as color name "Tomato", but 50% transparent:</p>
+<p style="background-color:rgba(255, 99, 71, 0.5);">rgba(255, 99, 71, 0.5)</p>
+<p style="background-color:hsla(9, 100%, 64%, 0.5);">hsla(9, 100%, 64%, 0.5)</p>
+                   <pre> Example
+                    < h1 style="background-color:rgb(255, 99, 71);">...< /h1>
+                    < h1 style="background-color:#ff6347;">...< /h1>
+                    < h1 style="background-color:hsl(9, 100%, 64%);">...< /h1>
+                    
+                    < h1 style="background-color:rgba(255, 99, 71, 0.5);">...< /h1>
+                    < h1 style="background-color:hsla(9, 100%, 64%, 0.5);">...< /h1></pre>
+
+                    <li><h1>HTML Links</h1></li>
+                   <pre style="background-color: cyan;color: black;font-family: 'Times New Roman', Times, serif;">Links are found in nearly all web pages. Links allow users to click their way from page to page.
+
+                    <h2>HTML Links - Hyperlinks</h2>
+                    HTML links are hyperlinks.
+                    
+                    You can click on a link and jump to another document.
+                    
+                    When you move the mouse over a link, the mouse arrow will turn into a little hand.</pre>
+                    <p style="background-color: yellow;">Note: A link does not have to be text. A link can be an image or any other HTML element!</p>
+                    <pre style="background-color: cyan;color: black;font-family: 'Times New Roman', Times, serif;">
+                        <h2>HTML Links - Syntax</h2>
+                            The HTML < a> tag defines a hyperlink. It has the following syntax:</pre>
+                         <pre>   < a href=" url">link text< /a> </pre>
+                         <pre style="background-color: cyan;color: black;font-family: 'Times New Roman', Times, serif;">
+                            The most important attribute of the < a> element is the href attribute, which indicates the link's destination.
+                            
+                            The link text is the part that will be visible to the reader.
+                            
+                            Clicking on the link text, will send the reader to the specified URL address.</pre>
+<pre>
+    Example
+This example shows how to create a link to W3Schools.com:
+
+< a href="https://www.w3schools.com/">Visit W3Schools.com!</a >
+</pre>
+<pre style="background-color: cyan;color: black;font-family: 'Times New Roman', Times, serif;"> </pre>
+By default, links will appear as follows in all browsers:
+<ul>
+<li>An unvisited link is underlined and blue</li>
+<li>A visited link is underlined and purple</li>
+<li>An active link is underlined and red</li>
+</ul></pre>         
+<p style="background-color: yellow;">Tip: Links can of course be styled with CSS, to get another look!</p>   
+
+<pre style="background-color: cyan;color: black;font-family: 'Times New Roman', Times, serif;">
+<h2>HTML Links - The target Attribute</h2>
+    By default, the linked page will be displayed in the current browser window. To change this, you must specify another target for the link.
+    
+    The target attribute specifies where to open the linked document.
+    
+    The target attribute can have one of the following values:
+    <ul>
+    <li>_self - Default. Opens the document in the same window/tab as it was clicked</li>_
+    <li>_blank - Opens the document in a new window or tab</li>_
+    <li>parent - Opens the document in the parent frame</li>_
+    <li>_top - Opens the document in the full body of the window</li>_</ul>
+</pre>
+<pre>
+    Example
+Use target="_blank" to open the linked document in a new browser window or tab:
+
+< a href="https://www.w3schools.com/" target="_blank">Visit W3Schools! </a>
+</pre>
+<pre style="background-color: cyan;color: black;font-family: 'Times New Roman', Times, serif;">
+    <h2>Absolute URLs vs. Relative URLs</h2>
+        Both examples above are using an absolute URL (a full web address) in the href attribute.
+        
+        A local link (a link to a page within the same website) is specified with a relative URL (without the "https://www" part):
+</pre>
+<pre>
+    Example
+< h2>Absolute URLs< /h2>
+< p>< a href="https://www.w3.org/">W3C< /a>< /p>
+< p>< a href="https://www.google.com/">Google< /a>< /p>
+
+< h2>Relative URLs</h2>
+< p>< a href="html_images.asp">HTML Images /a></ p>
+< p> < a href="/css/default.asp">CSS Tutorial< /a>< /p >
+
+</pre>
+<pre style="background-color: cyan;color: black;font-family: 'Times New Roman', Times, serif;"> 
+<h2>HTML Links - Use an Image as a Link</h2>
+    To use an image as a link, just put the < img> tag inside the < a> tag:
+</pre>
+<pre>
+    Example
+< a href="default.asp">
+< img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+< /a>
+</pre>
+
+
+<pre style="background-color: cyan;color: black;font-family: 'Times New Roman', Times, serif;">
+<h2>Link to an Email Address</h2>
+    Use mailto: inside the href attribute to create a link that opens the user's email program (to let them send a new email):
+</pre>
+<pre>< a href="mailto:someone@example.com">Send email< /a></pre>
+<pre style="background-color: cyan;color: black;font-family: 'Times New Roman', Times, serif;">
+<h2>Button as a Link</h2>
+    To use an HTML button as a link, you have to add some JavaScript code.
+    
+    JavaScript allows you to specify what happens at certain events, such as a click of a button:
+</pre>
+<pre>< button onclick="document.location='default.asp'">HTML Tutorial< /button></pre>
+<pre style="background-color: cyan;color: black;font-family: 'Times New Roman', Times, serif;"> 
+    <h2>Link Titles</h2>
+        The title attribute specifies extra information about an element. The information is most often shown as a tooltip text when the mouse moves over the element.
+</pre>
+<pre>< a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our HTML Tutorial< /a></pre>
+
+
+</ol>
+</body>
+</html>
