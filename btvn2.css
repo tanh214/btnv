@@ -1,0 +1,55 @@
+p{
+color: rgb(216, 216, 216);
+font-size: 13px;
+text-align: center;
+}
+
+div{
+    font-size: 60px;
+    text-align: center;
+}
+hr{
+    width: 10%;
+    height: 2px;
+    color: black;
+    background-color: black;  
+    
+}
+.bthg{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: center;
+    
+}
+.sbthg{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    margin-left: 11cm;
+}
+b{
+    font-size: 60px;
+}
+span{
+        float: left;
+        line-height: 85%;
+        width: .6em;
+        font-size: 400%;
+        font-family: georgia;
+}
+.fbthg{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    text-align: center;
+}
+.tonhat{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    text-align: center;
+
+}
+.tovua{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    text-align: center;
+
+}
