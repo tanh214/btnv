@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+    text-align: center;
+    position: relative;
+    margin-bottom: 0;
+}
+
+header img.cover {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* Chiều cao tối đa của phần bìa */
+    object-fit: cover; /* Cắt lấy phần giữa của ảnh */
+    display: block;
+}
+
+header img.logo {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.container {
+    max-width: 1200px; /* giới hạn chữ cái trong 1 khu vực */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Màu nền trắng mờ */
+    border-radius: 15px; /* Bo góc khung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng để làm nổi bật khung */
+}
+nav {
+   text-align: center;
+   background-color: rgb(193, 193, 193);
+}
+nav a {
+    color: aqua;
+    
+    text-decoration: none;
+}
+body{
+    background-image: url(https://scr.vn/wp-content/uploads/2020/07/H%C3%ACnh-%E1%BA%A3nh-thi%C3%AAn-nhi%C3%AAn-ch%E1%BA%A5t-l%C6%B0%E1%BB%A3ng-cao-s%E1%BA%AFc-n%C3%A9t-scaled.jpg);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+   background-repeat: no-repeat;
+ background-attachment: fixed;
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://scr.vn/wp-content/uploads/2020/07/H%C3%ACnh-n%E1%BB%81n-Star-War-cho-desktop-scaled.jpg" alt="Ảnh bìa" class="cover">
+    </header>
+    <nav>
+        <a href="#about">Về Tôi</a> <br>
+        <a href="#education">Học Vấn</a><br>
+        <a href="#skills">Kỹ Năng</a><br>
+        <a href="#contact">Liên Hệ</a>
+    </nav>
+    <div class="container">
+        <section id="about">
+            <h2>Về Tôi</h2>
+            <p>
+                hello ! tôi là Nguyễn Duy Thành sinh viên của HNMU với 1 niềm đam mê công nghệ và "YÊU TRƯỜNG" sâu sắc tôi đã chọn trường để làm nơi học tập, tìm tòi
+và nguyên cứu về công nghệ . 
+            </p>
+        </section>
+
+        <section id="education">
+            <h2>Học Vấn</h2>
+            <p>
+                Tôi đã tốt nghiệp THPT quốc gia và hiện tại đang học ở trường HNMU đại học Thủ Đô Hà Nội
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>Kỹ năng</h2>
+            <p>
+                Dưới đây là các kỹ năng tôi đã phát triển qua nhiều năm làm việc:
+                <ul>
+                    <li>Lập trình web với HTML, CSS, JavaScript</li>
+                    <li>Phát triển ứng dụng với Python và Java</li>
+                    <li>Quản lý hệ thống với Linux và Docker</li>
+                    <li>Lập trình game với python và C++</li>
+                </ul>
+            </p>
+        </section>
+
+        <section id="contact">
+            <h2>Liên Hệ</h2>
+            <p>
+                Nếu bạn muốn biết thêm về tôi, vui lòng liên hệ qua email:doyousay987@gmail.com"</a> hoặc kết nối qua Facebook: duy thành nguyễn</a>.
+            </p>
+        </section>
+    </div>
+</body>
+</html>
