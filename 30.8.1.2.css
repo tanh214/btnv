@@ -1,0 +1,14 @@
+button{
+    padding: 20px;
+    border-radius: 5px;
+   background-color:  green;
+   color: white;  
+}
+button:hover{
+    background-color:  rgb(0, 65, 0);
+}
+#ha{margin-left: 5cm;
+}
+div{
+    display: inline;
+}
