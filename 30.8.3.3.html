@@ -4,25 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        body{
-            max-width: 1000px;
-            margin-left: 7cm;
-        }
-        table{
-            border: 3px solid rgb(166, 166, 166);
-            border-collapse: collapse;
-            width: 100%;
-            
-        }
-        tr,th,td{
-            padding: 12px;
-           
-            border: 3px solid rgb(166, 166, 166);
-        }
-        td:hover{
-            background-color: #ddd;
-        color: red;}
-       
+        table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  background-color: #228B22; /* Màu xanh lá cây đậm */
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+
+tbody tr {
+  background-color: white;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tbody tr:hover {
+  background-color: #c0c0c0; /* Màu xám nhạt khi hover */
+}
+
 
         
     </style>
@@ -31,47 +36,46 @@
 </head>
 <body>
     <table>
-        
-        <tr style="background-color: rgb(88, 199, 88); color: azure;">
+        <thead>
+          <tr>
             <th>tên công ti</th>
-            <th style="width: 7cm;">địa chỉ</th>
-            <th style="width: 5cm;">quốc gia</th>
-        </tr>
-        
-        <div></div><tr style="background-color: rgb(211, 211, 211);">
-            <td>Alfreds Futterkiste	</td>
-            <td>Maria Anders	</td>
-            <td>Germany
-            </td>
-        </tr></div>
-       <div></div> <tr style="background-color: rgb(255, 255, 255);">
-            <td>Centro comercial Moctezuma	</td>
-            <td>Francisco Chang	</td>
-            <td>Mexico
-            </td>
-        </tr></div>
-        <div></div><tr style="background-color: rgb(211, 211, 211);">
-            <td>Ernst Handel	</td>
-            <td>Roland Mendel	</td>
+            <th>địa chỉ</th>
+            <th>quốc gia</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Maria Anders</td>
+            <td>Germany</td>
+          </tr>
+          <tr>
+            <td>Centro comercial Moctezuma</td>
+            <td>Francisco Chang</td>
+            <td>Mexico</td>
+          </tr>
+          <tr>
+            <td>Ernst Handel</td>
+            <td>Roland Mendel</td>
             <td>Austria</td>
-        </tr></div>
-        <div></div><tr style="background-color: rgb(255, 255, 255);">
-            <td>Island Trading	</td>
-            <td>Helen Bennett	</td>
-            <td>UK
-            </td>
-        </tr></div>
-        <div></div><tr style="background-color: rgb(211, 211, 211);">
-            <td>Laughing Bacchus Winecellars	</td>
-            <td>Yoshi Tannamuri	</td>
+          </tr>
+          <tr>
+            <td>Island Trading</td>
+            <td>Helen Bennett</td>
+            <td>UK</td>
+          </tr>
+          <tr>
+            <td>Laughing Bacchus Winecellars</td>
+            <td>Yoshi Tannamuri</td>
             <td>Canada</td>
-        </tr ></div>
-        <div></div><tr style="background-color: rgb(255, 255, 255);">
-            <td>Magazzini Alimentari Riuniti	</td>
-            <td>Giovanni Rovelli	</td>
+          </tr>
+          <tr>
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Giovanni Rovelli</td>
             <td>Italy</td>
-        </tr></div>
-        
-    </table>
+          </tr>
+        </tbody>
+      </table>
+      
 </body>
 </html>
