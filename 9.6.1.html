@@ -6,7 +6,6 @@
     <style>
         body{
            height: 2000px;
-            
             margin: 0;
             padding: 0;
         }
@@ -30,10 +29,12 @@
             display: flex;
             align-items: center;
             position: fixed;
-            top: 0; 
+            
             width: 100%;
             z-index: 1000;
-            top: 6px;
+            top: 0px;
+            background-color:rgb(255, 255, 255);
+            
      
             
         }
@@ -54,10 +55,11 @@
             position: fixed;
             overflow: scroll;
             z-index: 999;
-            top: 60px;
+            top: 54px;
            overflow-x: auto;
            width: 100%;
            overflow-y: hidden;
+           
             
         }
         div.haha a{
@@ -68,6 +70,7 @@ white-space: nowrap;
             float: left;
             text-decoration: none;
             margin: 0;
+
             
             background-color: rgb(31, 32, 32);
         }
@@ -84,7 +87,7 @@ white-space: nowrap;
             background-color: rgb(225, 225, 225);
             max-height: 83vh;
             z-index: 998;
-            top: 120px
+            top: 114px
            
         }
         div.huhu a{
@@ -100,8 +103,45 @@ white-space: nowrap;
         .huhu a:hover{
             background-color: rgb(78, 211, 127);
         }
+        .main{
+            position: absolute;
+         top: 6cm;
+        left: 8cm;
+        z-index: 998;
+        }
+        button{
+background-color: rgb(102, 244, 135);
+padding: 20px;
+border: 2px solid white;
+border-radius: 10px;
+color: white;
+        }
+        button:hover{
+            background-color: rgb(75, 201, 90);
+        }
+.main2{
+    background-color: rgb(54, 203, 54);
+    padding-top: 25px;
+    padding-bottom: 25px;
+padding-left: 1cm;
+    padding-right: 27cm;
+    position: absolute;
+    top: 10cm;
+    left: 7cm;
+    color: white;
+    font-size: larger;
+}
     </style>
     <title>Document</title>
+    <script> // chống trộm //
+        document.addEventListener('keydown', function(event) {
+            if (event.keyCode === 123 || // F12
+                (event.ctrlKey && event.keyCode === 85) || // Ctrl+U
+                (event.ctrlKey && event.shiftKey && event.keyCode === 73)) { // Ctrl+Shift+I
+                event.preventDefault();
+            }
+        });
+    </script>
 </head>
 <body>
     <section>
@@ -200,6 +240,23 @@ white-space: nowrap;
 </div>
 
     </section>
+    <section class="main">
+    <h1>CSS Tutorial</h1>
+    <div id="nut"> 
+      <a href="">  <button> < home</button></a>
+       <a style="margin-left: 20cm;" href=""> <button>next > </button></a>
+    </div>
+    
+    
+</section>
+
+<div class="main2">
+        <p style="white-space: nowrap">CSS is the language we use to style an HTML document. </p>
+
+        <p style="white-space: nowrap">  CSS describes how HTML elements should be displayed. </p>
+            
+        <p style="white-space: nowrap"> This tutorial will teach you CSS from basic to advanced.</p>
+    </div>
 
 </body>
 </html>
