@@ -1,0 +1,399 @@
+html, body {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    margin: 0 0;
+    overflow: hidden;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+::selection {
+    background-color: black; /* Màu nền khi chọn văn bản */
+    color: white; /* Màu chữ khi chọn văn bản */
+}
+
+.first {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 800px;
+    width: 100vw;
+}
+
+.first .backimg {
+    position: absolute;
+    height: 800px;
+    width: 100vw;
+}
+
+.first .backimg img {
+    background-image: url('Back.png');
+    height: 800px;
+    width: 100vw;
+}
+
+.first .nav {
+    position: absolute;
+    display: inline-flex;
+    margin-top: 33px;
+    margin-left: 180px;
+    margin-right: 180px;
+}
+
+.first .nav .image img {
+    position: absolute;
+    width: 120px;
+    height: 36px;
+}
+
+.first .nav ul {
+    list-style: none;
+    color: white;
+    display: inline-flex;
+    gap: 30px;
+    margin-left: 525px;
+}
+
+.first .nav li {
+    font-size: 18px;
+}
+
+.first .nav li:hover {
+    color: white;
+}
+
+.first .nav li i:hover {
+    color: white;
+}
+
+.first .text {
+    position: absolute;
+    top: 140px;
+    color: white;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 70px;
+    line-height: 70px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.first .button {
+    position: absolute;
+    width: 157px;
+    height: 41px;
+}
+
+.first .button .lop1 {
+    position: absolute;
+    top: 480px;
+    color: black;
+    background-color: white;
+    font-size: 17px;
+    line-height: 17px;
+    width: 157px;
+    height: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.first .button .lop1 a {
+    text-decoration: none;
+}
+
+.first .button .lop1 a:link,:visited,:hover,:active {
+    text-decoration: none;
+    color: black;
+}
+
+.first .button .lop1:hover {
+    opacity: 0.8;
+}
+
+.first .button .lop2 {
+    position: absolute;
+}
+
+.second {
+    margin: 60px 0px;
+}
+
+.second .textline1, .textline2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.second .textline1 {
+    font-size: 22px;
+}
+
+.second .textline2 {
+    font-size: 14px;
+    color: #666;
+    margin-top: 3px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 75;
+}
+
+.third {
+    margin: 0px 180px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.third .item1, .item2, .item3, .item4, .anh1, .lop1, .lop2, .line1, .line2 {
+    width: 263px;
+    height: 325px;
+}
+
+.third .item1, .item2, .item3, .item4 {
+    position: relative;
+}
+
+.third .anh1 {
+    position: absolute;
+}
+
+.third .anh1 .lop1 {
+    position: absolute;
+    transition: 0.6s;
+}
+
+.third .anh1 .lop1:hover {
+    opacity: 0;
+}
+
+.third .anh1 .lop2 {
+    position: absolute;
+    opacity: 0;
+    transition: 0.6s;
+}
+
+.third .anh1 .lop2:hover {
+    opacity: 1;
+}
+
+.third .item1 .line1 {
+    position: absolute;
+    display: inline-flex;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 87.5;
+    font-size: 18px;
+    margin-top: 345px;
+}
+
+.third .item2 .line1 {
+    position: absolute;
+    display: inline-flex;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 87.5;
+    font-size: 18px;
+    margin-top: 345px;
+}
+
+.third .item3 .line1 {
+    position: absolute;
+    display: inline-flex;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 87.5;
+    font-size: 18px;
+    margin-top: 345px;
+}
+
+.third .item4 .line1 {
+    position: absolute;
+    display: inline-flex;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 87.5;
+    font-size: 18px;
+    margin-top: 345px;
+}
+
+.third .item1 .line1 .p1 {
+    position: absolute;
+}
+
+.third .item2 .line1 .p1 {
+    position: absolute;
+}
+
+.third .item3 .line1 .p1 {
+    position: absolute;
+}
+
+.third .item4 .line1 .p1 {
+    position: absolute;
+}
+
+.third .item1 .line1 .p2 {
+    position: absolute;
+    right: 0;
+}
+
+.third .item2 .line1 .p2 {
+    position: absolute;
+    right: 0;
+}
+
+.third .item3 .line1 .p2 {
+    position: absolute;
+    right: 0;
+}
+
+.third .item4 .line1 .p2 {
+    position: absolute;
+    right: 0;
+}
+
+.third .item1 .line2 {
+    position: absolute;
+    margin-top: 375px;
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 75;
+}
+
+.third .item2 .line2 {
+    position: absolute;
+    margin-top: 375px;
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 75;
+}
+
+.third .item3 .line2 {
+    position: absolute;
+    margin-top: 375px;
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 75;
+}
+
+.third .item4 .line2 {
+    position: absolute;
+    margin-top: 375px;
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 75;
+}
+
+@media only screen and (max-width: 1000px) {
+    .first {
+        position: relative;
+    }
+    .first .nav {
+        overflow: hidden;
+        position: absolute;
+    }
+    .first .nav .image {
+        position: absolute;
+    }
+    .first .nav .image img {
+        position: absolute;
+    }
+    .first .text {
+        font-size: 50px;
+    }
+    .third {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 100px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .first {
+        position: relative;
+    }
+    .first .nav {
+        overflow: hidden;
+        position: absolute;
+    }
+    .first .nav .image {
+        position: absolute;
+    }
+    .first .nav .image img {
+        position: absolute;
+    }
+    .first .text {
+        font-size: 50px;
+    }
+    .third {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .third .item1, .item2, .item3, .item4 {
+        width: 200px;
+        height: 262px;
+        position: relative;
+    }
+    .third img {
+        width: 200px;
+        height: 262px;
+    }
+    .third .item1 .line1, .line2 {
+        position: absolute;
+        top: -65px;
+        width: 200px;
+    } 
+    .third .item2 .line1, .line2 {
+        position: absolute;
+        top: -65px;
+        width: 200px;
+    } 
+    .third .item3 .line1, .line2 {
+        position: absolute;
+        top: -65px;
+        width: 200px;
+    } 
+    .third .item4 .line1, .line2 {
+        position: absolute;
+        top: -65px;
+        width: 200px;
+    }
+}
