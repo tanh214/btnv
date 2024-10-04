@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="overflow: hidden;">
+    <img src="https://binhminhdigital.com/StoreData/images/PageData/bi-quyet-chup-anh-hoang-hon-dep-Binhminhdigital(1).jpg" alt="" 
+    style="position: absolute;width: 100%;height: auto;z-index: 5; padding: 0;margin: 0;left: 0;top: 0;">
+    <img id="winner" src="https://tse1.explicit.bing.net/th?id=OIP.Mjb-ejelc5mWOJybZz9ZSwHaEK&pid=Api&P=0&h=180" alt="" style="width: 100%;height: 100%;position: absolute;z-index: 4;padding: 0;margin: 0;left: 0;top :0;">
+    <script> 
+    while (true){
+        var dayso = [1,2,3,4,5,6,7,8,9,10];
+        var sodung = Math.floor(Math.random() * dayso.length)+1;
+        var songdung = prompt("nhập dữ liệu nào baby");
+if( songdung != sodung){
+    alert("đen rồi em ạ hahaha " );
+    alert("số đúng là gà quá  "+ sodung );
+
+} else {
+    alert(" chúc mừng em đc diddy thông đít !");
+    alert("tặng em trc khi bị thông");
+    
+    break;
+}
+
+    }document.getElementById("winner").style.zIndex = 10 ;
+    document.addEventListener('keydown', function(event) {
+    if (event.keyCode === 123 || // F12
+        (event.ctrlKey && event.keyCode === 85) || // Ctrl+U
+        (event.ctrlKey && event.shiftKey && event.keyCode === 73)) { // Ctrl+Shift+I
+        event.preventDefault();
+        alert("Vui lòng không mở Developer Tools!");
+    }
+});
+
+    </script>
+    
+</body>
+</html>
