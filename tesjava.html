@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="winner" src="https://tse3.explicit.bing.net/th?id=OIP.fn9WKHoq6sZ-wvvkvkj_bQHaF7&pid=Api&P=0&h=180" alt="" style="width: 100%;height: auto;opacity: 0;">
+    <script> 
+    while (true){
+        var dayso = [1,2,3,4,5,6,7,8,9,10];
+        var sodung = Math.floor(Math.random() * dayso.length)+1;
+        var songdung = prompt("nhập dữ liệu nào baby");
+if( songdung != sodung){
+    alert("đen rồi em ạ hahaha " );
+    alert("số đúng là gà quá  "+ sodung );
+
+} else {
+    alert(" chúc mừng em đc diddy thông đít !");
+    alert("tặng em trc khi bị thông");
+    
+    break;
+}
+document.getElementById("winner").style.opacity = 1;
+    }
+    document.addEventListener('keydown', function(event) {
+    if (event.keyCode === 123 || // F12
+        (event.ctrlKey && event.keyCode === 85) || // Ctrl+U
+        (event.ctrlKey && event.shiftKey && event.keyCode === 73)) { // Ctrl+Shift+I
+        event.preventDefault();
+        alert("Vui lòng không mở Developer Tools!");
+    }
+});
+
+    </script>
+    
+</body>
+</html>
