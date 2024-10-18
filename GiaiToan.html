@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiếu Trung</title>
+    <link rel="stylesheet" href="giaitoancongtru.css">
+</head>
+<body>
+
+<h2 class="center">Các phép toán</h2>
+
+<div class="calculator-container">
+    <!-- cộng -->
+    <input type="number" id="num1Add" placeholder="Input number">
+    +
+    <input type="number" id="num2Add" placeholder="Input number">
+    <button onclick="calculate('add')">=</button>
+    <input type="text" id="resultAdd" readonly>
+
+    <!-- trừ -->
+    <br><br>
+    <input type="number" id="num1Sub" placeholder="Input number">
+    -
+    <input type="number" id="num2Sub" placeholder="Input number">
+    <button onclick="calculate('sub')">=</button>
+    <input type="text" id="resultSub" readonly>
+
+    <!-- nhân -->
+    <br><br>
+    <input type="number" id="num1Mul" placeholder="Input number">
+    *
+    <input type="number" id="num2Mul" placeholder="Input number">
+    <button onclick="calculate('mul')">=</button>
+    <input type="text" id="resultMul" readonly>
+
+    <!-- chia -->
+    <br><br>
+    <input type="number" id="num1Div" placeholder="Input number">
+    /
+    <input type="number" id="num2Div" placeholder="Input number">
+    <button onclick="calculate('div')">=</button>
+    <input type="text" id="resultDiv" readonly>
+</div>
+
+<h2 class="center">Các phép toán vừa thực hiện</h2>
+<div id="recent-calculations" class="center">
+    <div class="operation">
+        <p><strong>PHÉP CỘNG</strong></p>
+        <div id="addLog">Chưa thực hiện</div>
+    </div>
+    <div class="operation">
+        <p><strong>PHÉP TRỪ</strong></p>
+        <div id="subLog">Chưa thực hiện</div>
+    </div>
+    <div class="operation">
+        <p><strong>PHÉP NHÂN</strong></p>
+        <div id="mulLog">Chưa thực hiện</div>
+    </div>
+    <div class="operation">
+        <p><strong>PHÉP CHIA</strong></p>
+        <div id="divLog">Chưa thực hiện</div>
+    </div>
+</div>
+
+<!-- reset bắt từn -->
+<div class="center">
+    <button class="reset-btn" onclick="resetCalculations()">Ø</button>
+</div>
+
+<script src="toancongtru.js"></script>
+
+</body>
+</html>

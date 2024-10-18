@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiếu Trung</title>
+    <link rel="stylesheet" href="formregister.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1 id="formTitle">FORM ĐĂNG KÝ</h1>
+        <button onclick="toggleColorOptions()">Đổi màu Title</button>
+        <div id="colorOptions" style="display: none;">
+            <button onclick="changeTitleColor('red')">Đỏ</button>
+            <button onclick="changeTitleColor('blue')">Xanh dương</button>
+            <button onclick="changeTitleColor('green')">Xanh lá</button>
+            <button onclick="changeTitleColor('purple')">Tím</button>
+            <button onclick="changeTitleColor('orange')">Cam</button>
+            <button onclick="changeTitleColor('black')">Đen</button>
+        </div>
+
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <p>Họ: <input type="text" id="ho" name="ho"></p>
+            <p>Tên: <input type="text" id="ten" name="ten"></p>
+
+            <!-- ngày sinh -->
+            <div class="birth-container">
+                <div class="day-month">
+                    <label for="day">Ngày sinh: Ngày: </label>
+                    <select name="day" id="day" class="select-box small-select">
+                        <option value="">Chọn ngày</option>
+                        <script>
+                            for (let i = 1; i <= 31; i++) {
+                                document.write(`<option value="${i}">${i}</option>`);
+                            }
+                        </script>
+                    </select>
+                </div>
+
+                <div class="day-month">
+                    <label for="month">Tháng: </label>
+                    <select name="month" id="month" class="select-box small-select">
+                        <option value="">Chọn tháng</option>
+                        <script>
+                            for (let i = 1; i <= 12; i++) {
+                                document.write(`<option value="${i}">${i}</option>`);
+                            }
+                        </script>
+                    </select>
+                </div>
+
+                <div class="year">
+                    <label for="year">Năm: </label>
+                    <select name="year" id="year" class="select-box small-select">
+                        <option value="">Chọn năm</option>
+                        <script>
+                            for (let i = 1970; i <= 2030; i++) {
+                                document.write(`<option value="${i}">${i}</option>`);
+                            }
+                        </script>
+                    </select>
+                </div>
+            </div>
+
+            <p>Giới tính: 
+                <input type="radio" name="gender" value="Nam"> Nam
+                <input type="radio" name="gender" value="Nữ"> Nữ
+            </p>
+
+            <p>Số điện thoại: <input type="text" id="phone" name="phone"></p>
+
+            <p>Khác: <textarea name="other" rows="3" cols="30"></textarea></p>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+
+    <script src="registerform.js"></script>
+</body>
+</html>
