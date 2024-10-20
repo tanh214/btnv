@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý công việc nâng cao</title>
+    <link rel="stylesheet" href="bai1css.css">
+</head>
+<body>
+    <h1>Quản lý thông tin cá nhân</h1>
+    <div class="task-manager">
+        <div class="input-section">
+            <input type="text" id="id-input" placeholder="ID">
+            <input type="text" id="name-input" placeholder="Tên">
+            <input type="date" id="dob-input" placeholder="Ngày sinh">
+            <input type="text" id="task-input" placeholder="Công việc">
+            <input type="text" id="contact-input" placeholder="Liên lạc">
+        </div>
+        <div class="controls">
+            <button onclick="addPerson()">Thêm</button>
+            <button onclick="pinTask()">Ghim công việc</button>
+            <button onclick="cancelPinTask()">Huỷ ghim công việc</button>
+            <button onclick="removePerson()">Xóa mục đã chọn</button>
+            <select id="sort-options" onchange="sortList()">
+                <option value="id">Sắp xếp theo ID</option>
+                <option value="name">Sắp xếp theo Tên</option>
+            </select>
+        </div>
+        <div class="list-container">
+            <ul id="person-list"></ul>
+        </div>
+        <p id="status-message"></p>
+    </div>
+    <script src="bai1JS.js"></script>
+</body>
+</html>
