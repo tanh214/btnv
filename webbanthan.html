@@ -401,97 +401,7 @@
 <section class="main">
         <div class="main2">
             <canvas id="effectCanvas"></canvas>
-            <script>
-               const canvas = document.getElementById('effectCanvas');
-const ctx = canvas.getContext('2d');
-
-// Cập nhật kích thước canvas theo kích thước của main2
-function setCanvasSize() {
-    const main2 = document.querySelector('.main2');
-    canvas.width = main2.offsetWidth;
-    canvas.height = main2.offsetHeight;
-}
-
-setCanvasSize();
-
-const particlesArray = [];
-
-// Lớp tạo hạt particle
-class Particle {
-    constructor(x, y, size, speedX, speedY) {
-        this.x = x;
-        this.y = y;
-        this.size = size;
-        this.speedX = speedX;
-        this.speedY = speedY;
-    }
-
-    update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
-
-        // Khi hạt chạm vào mép canvas, đổi chiều di chuyển
-        if (this.x > canvas.width || this.x < 0) {
-            this.speedX *= -1;
-        }
-        if (this.y > canvas.height || this.y < 0) {
-            this.speedY *= -1;
-        }
-    }
-
-    draw() {
-        // Tạo gradient trắng-đen-xanh lá
-        const gradient = ctx.createRadialGradient(this.x, this.y, this.size * 0.2, this.x, this.y, this.size);
-        gradient.addColorStop(0, 'white');
-        gradient.addColorStop(0.5, 'black');
-        gradient.addColorStop(1, 'green');
-
-        ctx.fillStyle = gradient;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.closePath();
-        ctx.fill();
-    }
-}
-
-function initParticles() {
-    particlesArray.length = 0;
-    const numParticles = 100; // Số lượng hạt
-
-    for (let i = 0; i < numParticles; i++) {
-        const x = Math.random() * canvas.width;
-        const y = Math.random() * canvas.height;
-        const size = Math.random() * 5 + 2; // Kích thước của hạt
-        const speedX = (Math.random() * 2 - 1) * 0.5; // Tốc độ theo trục X
-        const speedY = (Math.random() * 2 - 1) * 0.5; // Tốc độ theo trục Y
-
-        particlesArray.push(new Particle(x, y, size, speedX, speedY));
-    }
-}
-
-function animateParticles() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    particlesArray.forEach((particle) => {
-        particle.update();
-        particle.draw();
-    });
-
-    requestAnimationFrame(animateParticles);
-}
-
-// Khởi tạo hiệu ứng particle
-initParticles();
-animateParticles();
-
-// Cập nhật kích thước canvas khi thay đổi kích thước cửa sổ
-window.addEventListener('resize', () => {
-    setCanvasSize();
-    initParticles(); // Tạo lại hạt sau khi thay đổi kích thước
-});
-
-
-            </script>
+            
         </div>
     <div class="content">
         <div id="a" style="font-size: 50px;" 
@@ -515,59 +425,7 @@ window.addEventListener('resize', () => {
 <section class="main">
     <div class="main2">
         <canvas id="effectCanvas1"></canvas>
-        <script>
-            const canvas1 = document.getElementById('effectCanvas1');
-            const ctx1 = canvas1.getContext('2d');
-
-            // Update canvas size based on the size of main2
-            function setCanvasSize1() {
-                const main2 = document.querySelector('.main2');
-                canvas1.width = main2.offsetWidth;
-                canvas1.height = main2.offsetHeight;
-            }
-
-            setCanvasSize1();
-
-            function glitchEffect1() {
-                // Clear the canvas
-                ctx1.clearRect(0, 0, canvas1.width, canvas1.height);
-
-                // Draw glitch segments
-                for (let i = 0; i < 20; i++) {
-                    let x = Math.random() * canvas1.width;
-                    let y = Math.random() * canvas1.height;
-                    let width = canvas1.width * (Math.random() * 0.2 + 0.1); // Length of glitch segment
-                    let height = canvas1.height * (Math.random() * 0.02 + 0.01); // Height of glitch segment
-
-                    // Create glitch by shifting regions
-                    ctx1.drawImage(
-                        canvas1,
-                        x, y, width, height,
-                        x + (Math.random() * 40 - 20), // Random X shift
-                        y + (Math.random() * 10 - 5),  // Random Y shift
-                        width, height
-                    );
-
-                    // Add random red or blue noise
-                    ctx1.globalCompositeOperation = 'lighter';
-                    ctx1.fillStyle = `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.2)`;
-                    ctx1.fillRect(x, y, width, height);
-                    ctx1.globalCompositeOperation = 'source-over';
-                }
-            }
-
-            function animateGlitch1() {
-                setCanvasSize1();
-                glitchEffect1();
-                setTimeout(animateGlitch1, 100);
-            }
-
-            // Start glitch effect
-            animateGlitch1();
-
-            // Resize canvas on window resize
-            window.addEventListener('resize', setCanvasSize1);
-        </script>
+        
         
 
 
@@ -599,59 +457,7 @@ window.addEventListener('resize', () => {
 <section class="main">
     <div class="main3">
         <canvas id="effectCanvas3"></canvas>
-        <script>
-            const canvas3 = document.getElementById('effectCanvas3');
-            const ctx3 = canvas3.getContext('2d');
-
-            // Update canvas size based on the size of main3
-            function setCanvasSize3() {
-                const main3 = document.querySelector('.main3');
-                canvas3.width = main3.offsetWidth;
-                canvas3.height = main3.offsetHeight;
-            }
-
-            setCanvasSize3();
-
-            function glitchEffect3() {
-                // Clear the canvas
-                ctx3.clearRect(0, 0, canvas3.width, canvas3.height);
-
-                // Draw glitch segments
-                for (let i = 0; i < 20; i++) {
-                    let x = Math.random() * canvas3.width;
-                    let y = Math.random() * canvas3.height;
-                    let width = canvas3.width * (Math.random() * 0.2 + 0.1); // Length of glitch segment
-                    let height = canvas3.height * (Math.random() * 0.02 + 0.01); // Height of glitch segment
-
-                    // Create glitch by shifting regions
-                    ctx3.drawImage(
-                        canvas3,
-                        x, y, width, height,
-                        x + (Math.random() * 40 - 20), // Random X shift
-                        y + (Math.random() * 10 - 5),  // Random Y shift
-                        width, height
-                    );
-
-                    // Add random red or blue noise
-                    ctx3.globalCompositeOperation = 'lighter';
-                    ctx3.fillStyle = `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.2)`;
-                    ctx3.fillRect(x, y, width, height);
-                    ctx3.globalCompositeOperation = 'source-over';
-                }
-            }
-
-            function animateGlitch3() {
-                setCanvasSize3();
-                glitchEffect3();
-                setTimeout(animateGlitch3, 100);
-            }
-
-            // Start glitch effect
-            animateGlitch3();
-
-            // Resize canvas on window resize
-            window.addEventListener('resize', setCanvasSize3);
-        </script>
+       
         
     </div>
 <div class="content">
@@ -695,28 +501,6 @@ window.addEventListener('resize', () => {
 </section>
     
 
-    <script>
-        // Lấy tất cả các phần tử menu có submenu
-        const menuItems = document.querySelectorAll('.has-submenu > a');
-
-        menuItems.forEach(item => {
-            item.addEventListener('click', function(e) {
-                e.preventDefault(); // Ngăn chặn chuyển trang khi nhấp
-
-                // Lấy menu con cấp 1 (submenu cấp 1)
-                const submenu = this.nextElementSibling;
-
-                // Đóng tất cả các submenu khác
-                document.querySelectorAll('.submenu').forEach(sub => {
-                    if (sub !== submenu) { // Kiểm tra để không đóng submenu hiện tại
-                        sub.classList.remove('active');
-                    }
-                });
-
-                // Chuyển trạng thái menu con hiện tại
-                submenu.classList.toggle('active');
-            });
-        });
-    </script>
+    <script src="hieuung.js"></script>
 </body>
 </html>
