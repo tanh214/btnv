@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <title>Document</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+          
+            
+            width: 100%; 
+            height: auto;
+         
+            
+        }
+        .video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+        
+        .navbar {
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            justify-content: end;
+            background-color: black;
+            margin: 0;
+            align-items: center;
+            padding: auto;
+            padding: 20px;
+            z-index: 999;
+           
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: aliceblue;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+            background-color: aqua;
+            transition: 0.4s;
+        }
+
+        .navbar li:first-child {
+            margin-right: auto; 
+        }
+
+        .main {
+            width: 100%; 
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+      padding: 0;
+      margin: 0;
+           
+        }
+
+        .main2 {
+            background-color: aliceblue;
+            width: 85%;
+            height: 70%;
+            margin-top: 20px; /* Đặt phần nội dung dưới menu */
+            border: 4px solid rgb(85, 89, 86);
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 1;
+            opacity: 0.4;
+            padding: 0;
+      margin: 0;
+            
+        }
+        .main3 {
+            background-color: aliceblue;
+            width: 85%;
+            height: 90%;
+            margin-top: 20px; /* Đặt phần nội dung dưới menu */
+            border: 4px solid rgb(85, 89, 86);
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 1;
+            opacity: 0.4;
+            padding: 0;
+      margin: 0;
+            
+        }
+
+        .submenu {
+            list-style-type: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            display: none;
+            width: auto;
+            z-index: 1000;
+        }
+
+        .submenu li {
+            position: relative;
+        }
+
+        .submenu li a {
+            padding: 10px;
+            background-color: brown;
+            text-decoration: none;
+            display: block;
+        }
+
+        .submenu a:hover {
+            background-color: aqua;
+        }
+
+        .has-submenu > a::after {
+            content: " ▼";
+        }
+
+        .submenu.active {
+            display: block;
+        }
+
+        .submenungang {
+            display: flex;
+            position: sticky;
+            z-index: 900;
+        }
+        .submenungang li{
+            flex-grow: 1;
+            white-space: nowrap;
+            
+            
+        }
+        .anhdaidien img {
+           max-width: 80%;
+            height: auto;
+            position: relative;
+  z-index: 4;
+  border-radius: 50%;
+        }
+        .noidung{
+            position: relative;
+            z-index: 10;
+            width: 80%; 
+            height: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            
+        }
+.gioithieu{
+    font-size: 25px;
+}
+       .content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+            z-index: 10;
+       } 
+       .gioithieu1{
+    font-size: 30px;
+}
+.gioithieu1 div{
+    padding: 10px;
+    margin: 0;
+}
+.noidung1{
+            position: relative;
+            z-index: 10;
+            width: 80%; 
+            height: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            
+        }
+        .noidungkynang{
+            position: relative;
+            z-index: 10;
+            width: 80%; 
+            height: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            flex-direction: column;
+            gap: 40px;
+            
+        }
+        
+        .hang1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap :100px;
+        }
+        
+        .hang1 div img{
+            width: 150px;
+            height: 90px;
+        }
+        .hang1  div{
+            padding: 30px;
+            background-color: rgb(181, 179, 179);
+            border-radius: 20px;
+            opacity: 0.4;
+        }
+        .hang1  div:hover{
+            opacity: 1;
+        }
+        .hang2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap :100px;
+        }
+        .hang2  div:hover{
+            opacity: 1;
+        }
+        .hang3  div:hover{
+            opacity: 1;
+        }
+        .hang2 div img{
+            width: 150px;
+            height: 90px;
+        }
+        .hang2 div{
+            padding: 30px;
+            background-color: rgb(181, 179, 179);
+            border-radius: 20px;
+            opacity: 0.4;
+        }.hang3{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap :100px;
+        }
+        .hang3 div img{
+            width: 150px;
+            height: 90px;
+        }
+        .hang3 div{
+            padding: 30px;
+            background-color: rgb(181, 179, 179);
+            border-radius: 20px;
+            opacity: 0.4;
+        }
+        .cuoi{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: aliceblue;
+            max-height:30% ;
+            height: 100px;
+            max-width: 100%;
+            padding: 0;
+            margin: 0;
+            flex-direction: column;
+        }
+        .logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap : 150px;
+            
+        }
+        .logo1{
+            font-size: 50px; /* Điều chỉnh kích thước logo */
+            color: #5fca7d; /* Màu sắc của logo */
+        }
+        #effectCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Không ảnh hưởng đến tương tác */
+    z-index: -1; /* Đưa canvas ra sau nội dung của main2 */
+}
+#effectCanvas1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Không ảnh hưởng đến tương tác */
+    z-index: -1; /* Đưa canvas ra sau nội dung của main2 */
+}
+#effectCanvas3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Không ảnh hưởng đến tương tác */
+    z-index: -1; /* Đưa canvas ra sau nội dung của main2 */
+}
+        
+    </style>
+</head>
+<body>
+    <video class="video-background" autoplay loop muted>
+        <source src="hinhneanime.mp4" type="video/mp4">
+       
+      </video>
+    <section style="position: fixed;width: 100%;z-index: 999;" >
+        <ul class="navbar">
+            <li><a href="#a">home</a></li>
+            <li><a href="#b">giới thiệu</a></li>
+            <li><a href="#c">sở thích</a></li>
+            <li><a href="#d">kỹ năng</a></li>
+            <li><a href="">liên hệ</a></li>
+            <li class="has-submenu">
+                <a href="">bài tập</a>
+                <ul class="submenu">
+                    <div class="submenungang">
+                        <li><a href="">Buổi 1</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/baitap.html">B1</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/2.1.html">B2.1</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/2.2.html">B2.2</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/2.3.html">B2.3</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/3.html">B3</a></li>
+                    </div>
+                    <div class="submenungang">
+                        <li><a href="">Buổi 2</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/TestLab1(inline).html">B1.1</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/testlab2.html">B1.2</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/testlab3.html">B1.3</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/23thang8bai2.html">B2.1</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/23.8.2.1.html">B2.2</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/23.8.2.2.html">B2.3</a></li>
+                    </div>
+                    <div class="submenungang">
+                        <li><a href="">Buổi 3</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/30.8.4.html">B1.1</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/30.8.3.3.html">B1.2</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/30.8.3.4.html">B1.3</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/30.8.3.2.html">B2.1</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/30.8.3.1.html">B2.2</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/30.8.1.1.html">B2.3</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/30.8.1.2.html">B3</a></li>
+                    </div>
+                    <div class="submenungang">
+                        <li><a href="">Buổi 4</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/9.6.1.html">B1</a></li>
+                    </div>
+                    <div class="submenungang">
+                        <li><a href="">Buổi 5</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/9.16.1.html">B1</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/9.16.2.html">B2</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/9.16.web.html">B3</a></li>
+                    </div>
+                    <div class="submenungang">
+                        <li><a href="">Buổi 6</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/20.9.1.html">B1</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/20.9.2.html">B2</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/20.9.3.html">B3</a></li>
+                    </div>
+                    <div class="submenungang">
+                        <li><a href="">Buổi 7</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/btvn10.2..html">B2</a></li>
+                    </div>
+                    <div class="submenungang">
+                        <li><a href="">Buổi 8</a></li>
+                        <li><a href>B1 cô làm mẫu r :) </a></li>
+                        <li><a href="https://tanh214.github.io/btnv/bai2.10.4.html">B2</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/tesjava.html">B3</a></li>
+                    </div>
+                    <div class="submenungang">
+                        <li><a href="">Buổi 9</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/GiaiToan.html"> cộng trừ</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/buoi9anh.html">ảnh</a></li>
+                        <li><a href="https://tanh214.github.io/btnv/RegisterForm.html">forrm đki</a></li>
+                    </div>
+                </ul>
+            </li>
+        </ul>
+    </section>
+<section class="main">
+        <div class="main2">
+            <canvas id="effectCanvas"></canvas>
+            <script>
+               const canvas = document.getElementById('effectCanvas');
+const ctx = canvas.getContext('2d');
+
+// Cập nhật kích thước canvas theo kích thước của main2
+function setCanvasSize() {
+    const main2 = document.querySelector('.main2');
+    canvas.width = main2.offsetWidth;
+    canvas.height = main2.offsetHeight;
+}
+
+setCanvasSize();
+
+const particlesArray = [];
+
+// Lớp tạo hạt particle
+class Particle {
+    constructor(x, y, size, speedX, speedY) {
+        this.x = x;
+        this.y = y;
+        this.size = size;
+        this.speedX = speedX;
+        this.speedY = speedY;
+    }
+
+    update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+
+        // Khi hạt chạm vào mép canvas, đổi chiều di chuyển
+        if (this.x > canvas.width || this.x < 0) {
+            this.speedX *= -1;
+        }
+        if (this.y > canvas.height || this.y < 0) {
+            this.speedY *= -1;
+        }
+    }
+
+    draw() {
+        // Tạo gradient trắng-đen-xanh lá
+        const gradient = ctx.createRadialGradient(this.x, this.y, this.size * 0.2, this.x, this.y, this.size);
+        gradient.addColorStop(0, 'white');
+        gradient.addColorStop(0.5, 'black');
+        gradient.addColorStop(1, 'green');
+
+        ctx.fillStyle = gradient;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.closePath();
+        ctx.fill();
+    }
+}
+
+function initParticles() {
+    particlesArray.length = 0;
+    const numParticles = 100; // Số lượng hạt
+
+    for (let i = 0; i < numParticles; i++) {
+        const x = Math.random() * canvas.width;
+        const y = Math.random() * canvas.height;
+        const size = Math.random() * 5 + 2; // Kích thước của hạt
+        const speedX = (Math.random() * 2 - 1) * 0.5; // Tốc độ theo trục X
+        const speedY = (Math.random() * 2 - 1) * 0.5; // Tốc độ theo trục Y
+
+        particlesArray.push(new Particle(x, y, size, speedX, speedY));
+    }
+}
+
+function animateParticles() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    particlesArray.forEach((particle) => {
+        particle.update();
+        particle.draw();
+    });
+
+    requestAnimationFrame(animateParticles);
+}
+
+// Khởi tạo hiệu ứng particle
+initParticles();
+animateParticles();
+
+// Cập nhật kích thước canvas khi thay đổi kích thước cửa sổ
+window.addEventListener('resize', () => {
+    setCanvasSize();
+    initParticles(); // Tạo lại hạt sau khi thay đổi kích thước
+});
+
+
+            </script>
+        </div>
+    <div class="content">
+        <div id="a" style="font-size: 50px;" 
+        >Về tôi</div>
+        <div class="noidung">
+        <div class="anhdaidien">
+            <img  src="https://static.zerochan.net/Nahida.full.3803288.jpg" alt=""></div>
+            
+                <div class="gioithieu">
+                  Xin chào! Tôi là Nguyễn Duy Thành, một sinh viên đam mê công nghệ và đang theo học tại trường đại học
+                  thủ đô hà nội, là một thành viên của tập thể lớp  CNTTD2023B
+                  Tôi có kinh nghiệm làm việc trong lĩnh vực phát triển phần mềm và đặc biệt quan tâm đến 
+                  lập ứng dụng và phát triển ứng dụng di động. Mục tiêu của tôi là tạo ra những sản phẩm 
+                  công nghệ có thể giúp ích cho cộng đồng và nâng cao hiệu suất làm việc.
+                
+              
+            </div>
+        </div>
+    </div>
+</section>
+<section class="main">
+    <div class="main2">
+        <canvas id="effectCanvas1"></canvas>
+        <script>
+            const canvas1 = document.getElementById('effectCanvas1');
+            const ctx1 = canvas1.getContext('2d');
+
+            // Update canvas size based on the size of main2
+            function setCanvasSize1() {
+                const main2 = document.querySelector('.main2');
+                canvas1.width = main2.offsetWidth;
+                canvas1.height = main2.offsetHeight;
+            }
+
+            setCanvasSize1();
+
+            function glitchEffect1() {
+                // Clear the canvas
+                ctx1.clearRect(0, 0, canvas1.width, canvas1.height);
+
+                // Draw glitch segments
+                for (let i = 0; i < 20; i++) {
+                    let x = Math.random() * canvas1.width;
+                    let y = Math.random() * canvas1.height;
+                    let width = canvas1.width * (Math.random() * 0.2 + 0.1); // Length of glitch segment
+                    let height = canvas1.height * (Math.random() * 0.02 + 0.01); // Height of glitch segment
+
+                    // Create glitch by shifting regions
+                    ctx1.drawImage(
+                        canvas1,
+                        x, y, width, height,
+                        x + (Math.random() * 40 - 20), // Random X shift
+                        y + (Math.random() * 10 - 5),  // Random Y shift
+                        width, height
+                    );
+
+                    // Add random red or blue noise
+                    ctx1.globalCompositeOperation = 'lighter';
+                    ctx1.fillStyle = `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.2)`;
+                    ctx1.fillRect(x, y, width, height);
+                    ctx1.globalCompositeOperation = 'source-over';
+                }
+            }
+
+            function animateGlitch1() {
+                setCanvasSize1();
+                glitchEffect1();
+                setTimeout(animateGlitch1, 100);
+            }
+
+            // Start glitch effect
+            animateGlitch1();
+
+            // Resize canvas on window resize
+            window.addEventListener('resize', setCanvasSize1);
+        </script>
+        
+
+
+    </div>
+<div class="content">
+    <div id="b" style="font-size: 50px;" 
+    >GIỚI THIỆU</div>
+    <div class="noidung">
+    
+        
+            <div class="gioithieu1">
+                <div> Họ và tên: Nguyễn Duy Thành</div>
+
+                <div>Tuổi: 19</div>
+                
+                <div>   Hiện đang là: Sinh viên năm 2 trường đại học thủ đô Hà Nội ( HNMU)</div>
+                
+                <div>  Ngành học: CNTT</div>
+                
+                <div> Định hướng:game developer</div>
+                
+                <div>  GPA hiện tại: 3.4</div>
+            
+          
+        </div>
+    </div>
+</div>
+</section>
+<section class="main">
+    <div class="main3">
+        <canvas id="effectCanvas3"></canvas>
+        <script>
+            const canvas3 = document.getElementById('effectCanvas3');
+            const ctx3 = canvas3.getContext('2d');
+
+            // Update canvas size based on the size of main3
+            function setCanvasSize3() {
+                const main3 = document.querySelector('.main3');
+                canvas3.width = main3.offsetWidth;
+                canvas3.height = main3.offsetHeight;
+            }
+
+            setCanvasSize3();
+
+            function glitchEffect3() {
+                // Clear the canvas
+                ctx3.clearRect(0, 0, canvas3.width, canvas3.height);
+
+                // Draw glitch segments
+                for (let i = 0; i < 20; i++) {
+                    let x = Math.random() * canvas3.width;
+                    let y = Math.random() * canvas3.height;
+                    let width = canvas3.width * (Math.random() * 0.2 + 0.1); // Length of glitch segment
+                    let height = canvas3.height * (Math.random() * 0.02 + 0.01); // Height of glitch segment
+
+                    // Create glitch by shifting regions
+                    ctx3.drawImage(
+                        canvas3,
+                        x, y, width, height,
+                        x + (Math.random() * 40 - 20), // Random X shift
+                        y + (Math.random() * 10 - 5),  // Random Y shift
+                        width, height
+                    );
+
+                    // Add random red or blue noise
+                    ctx3.globalCompositeOperation = 'lighter';
+                    ctx3.fillStyle = `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.2)`;
+                    ctx3.fillRect(x, y, width, height);
+                    ctx3.globalCompositeOperation = 'source-over';
+                }
+            }
+
+            function animateGlitch3() {
+                setCanvasSize3();
+                glitchEffect3();
+                setTimeout(animateGlitch3, 100);
+            }
+
+            // Start glitch effect
+            animateGlitch3();
+
+            // Resize canvas on window resize
+            window.addEventListener('resize', setCanvasSize3);
+        </script>
+        
+    </div>
+<div class="content">
+    <div id="c" style="font-size: 50px;" 
+    >KỸ NĂNG</div>
+    <div class="noidungkynang">
+    
+        
+            <div class="hang1">
+                <div><img src="https://bao035800.github.io/personal/logo%20html.png"  alt=""></div>
+                <div><img src="https://logos-world.net/wp-content/uploads/2023/02/JavaScript-Emblem.png" alt=""></div>
+                <div><img src="https://bao035800.github.io/personal/LOGO%20CSS.png" alt=""></div>
+            </div>
+            <div class="hang2">
+                <div><img src="https://logos-world.net/wp-content/uploads/2020/03/Microsoft-Word-Logo.png"  alt=""></div>
+                <div><img src="https://logos-world.net/wp-content/uploads/2020/11/Adobe-Photoshop-Logo.png" alt=""></div>
+                <div><img src="https://logos-world.net/wp-content/uploads/2021/10/Python-Logo.png" alt=""></div>
+            </div>
+            <div class="hang3">
+                <div><img src="https://1000logos.net/wp-content/uploads/2020/08/Microsoft-Access-Logo.png"  alt=""></div>
+                <div><img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Logo.png" alt=""></div>
+                <div><img src="https://1000logos.net/wp-content/uploads/2021/10/Unity-logo.png" alt=""></div>
+            </div>
+          
+        
+    </div>
+</div>
+</section>
+<section class="cuoi" >
+    
+
+    <div id="d" style="font-size: 20px;padding-bottom: 20px;" >Liên hệ</div>
+    <div class="logo">
+        <a href="https://www.facebook.com/profile.php?id=100029365632036" targer="blank"><i class="fa-brands fa-square-facebook logo1"></i></a>
+        <a><i class="fa-brands fa-square-instagram logo1"></i></a>
+        <a ><i class="fa-brands fa-pinterest logo1"></i></a>
+        <a><i class="fa-brands fa-twitter logo1"></i></a>
+        <a><i class="fa-brands fa-tiktok logo1"></i></a>
+    </div>
+    
+</section>
+    
+
+    <script>
+        // Lấy tất cả các phần tử menu có submenu
+        const menuItems = document.querySelectorAll('.has-submenu > a');
+
+        menuItems.forEach(item => {
+            item.addEventListener('click', function(e) {
+                e.preventDefault(); // Ngăn chặn chuyển trang khi nhấp
+
+                // Lấy menu con cấp 1 (submenu cấp 1)
+                const submenu = this.nextElementSibling;
+
+                // Đóng tất cả các submenu khác
+                document.querySelectorAll('.submenu').forEach(sub => {
+                    if (sub !== submenu) { // Kiểm tra để không đóng submenu hiện tại
+                        sub.classList.remove('active');
+                    }
+                });
+
+                // Chuyển trạng thái menu con hiện tại
+                submenu.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
